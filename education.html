@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISHAD AHMED - Education</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            height: 100%;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        nav {
+            margin-bottom: 40px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .content {
+            flex-grow: 1;
+            text-align: left;
+            padding: 0 40px;
+        }
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .content li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        body.fade-in {
+            opacity: 1;
+        }
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .content {
+                padding: 0 10px;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html" onclick="return loadPage(this.href)">Home</a></li>
+                <li><a href="education.html" onclick="return loadPage(this.href)">Education</a></li>
+                <li><a href="skills.html" onclick="return loadPage(this.href)">Skills</a></li>
+                <li><a href="projects.html" onclick="return loadPage(this.href)">Projects/Experience</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h2>Education</h2>
+            <ul>
+                <li>Master of Biotechnology - Amity University Kolkata</li>
+                <li>Bachelor of Biotechnology - BIIMS</li>
+                <li>Indian Certificate of Secondary Education (ISC) Class-XII Science Stream - Holy Rock School Burdwan</li>
+                <li>Indian Certificate of Secondary Education (ICSE) Class-X - St. Xavier's School Burdwan</li>
+            </ul>
+        </div>
+        <footer>
+            <p>&copy; 2024 Rishad Ahmed. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function loadPage(href) {
+            document.body.style.opacity = 0;
+            setTimeout(function() {
+                window.location.href = href;
+            }, 500);
+            return false;
+        }
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                document.body.classList.remove('fade-in');
+                setTimeout(function() {
+                    document.body.classList.add('fade-in');
+                }, 10);
+            }
+        });
+    </script>
+</body>
+</html>
