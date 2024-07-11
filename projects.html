@@ -13,6 +13,14 @@
                 background-position: 50px 50px;
             }
         }
+        @keyframes pulseOpacity {
+            0%, 100% {
+                opacity: 0.05;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
         body, html {
             margin: 0;
             padding: 0;
@@ -20,12 +28,23 @@
             line-height: 1.6;
             color: #333;
             height: 100%;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
             background-color: #f9f9f9;
             background-image: 
-                linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+                linear-gradient(to right, rgba(0,0,0,0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.3) 1px, transparent 1px);
             background-size: 25px 25px;
-            animation: backgroundAnimation 10s linear infinite;
+            animation: 
+                backgroundAnimation 10s linear infinite,
+                pulseOpacity 4s ease-in-out infinite;
         }
         .container {
             max-width: 800px;
@@ -76,12 +95,17 @@
             margin-top: 40px;
         }
         .project-link {
-            color: #0066cc;
+            color: #333;
             text-decoration: none;
-            font-weight: bold;
+            cursor: pointer;
         }
         .project-link:hover {
             text-decoration: underline;
+        }
+        .instruction {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
         }
         body {
             opacity: 0;
@@ -125,19 +149,17 @@
                 <li><a href="index.html" onclick="return loadPage(this.href)">Home</a></li>
                 <li><a href="education.html" onclick="return loadPage(this.href)">Education</a></li>
                 <li><a href="skills.html" onclick="return loadPage(this.href)">Skills</a></li>
-                <li><a href="projects.html" onclick="return loadPage(this.href)">Projects/Experience</a></li>
             </ul>
         </nav>
         <div class="content">
             <h2>Projects/Experience</h2>
+            <p class="instruction">Click on project name to open project details</p>
             
-            <h3>Bookstore Sales Analysis</h3>
+            <h3><a href="https://drive.google.com/drive/folders/1GQpy1cAlpWehovMbIJSOxkg3Ul6ZgzeR?usp=drive_link" class="project-link" target="_blank">Bookstore Sales Analysis</a></h3>
             <p>An advanced data analysis of sales of a bookstore.</p>
-            <p><a href="https://drive.google.com/drive/folders/1GQpy1cAlpWehovMbIJSOxkg3Ul6ZgzeR?usp=drive_link" class="project-link" target="_blank">View Project Details</a></p>
             
-            <h3>Internship (26th Jan 2024 - 4th May 2024)</h3>
+            <h3><a href="https://drive.google.com/file/d/1T94NV8Q_h19j9398R-tHF50PlTrJF3cr/view?usp=drive_link" class="project-link" target="_blank">Internship (26th Jan 2024 - 4th May 2024)</a></h3>
             <p>Amity University Kolkata (AUK): Mycobacterial Lipid Transport and Metabolism under guidance of Dr. Prabuddha Gupta (Assistant Professor, AUK)</p>
-            <p><a href="https://drive.google.com/file/d/1T94NV8Q_h19j9398R-tHF50PlTrJF3cr/view?usp=drive_link" class="project-link" target="_blank">View Project Report</a></p>
             
             <h3>Summer Internship (May 2023)</h3>
             <p>Amity University Kolkata (AUK): Characterization of ABC Transporter Proteins in Arabidopsis Thaliana under guidance of Dr. Ayan Raichaudhuri (Assistant Professor, Kolkata AUK)</p>
