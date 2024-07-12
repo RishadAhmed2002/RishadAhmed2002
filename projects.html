@@ -6,20 +6,12 @@
     <title>RISHAD AHMED - Projects/Experience</title>
     <style>
         @keyframes backgroundAnimation {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 50px 50px;
-            }
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
         }
         @keyframes pulseOpacity {
-            0%, 100% {
-                opacity: 0.05;
-            }
-            50% {
-                opacity: 0.5;
-            }
+            0%, 100% { opacity: 0.05; }
+            50% { opacity: 0.5; }
         }
         body, html {
             margin: 0;
@@ -47,13 +39,10 @@
                 pulseOpacity 4s ease-in-out infinite;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 80px;
+            padding: 40px;
             min-height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
         h2 {
             font-size: 1.8em;
@@ -62,103 +51,73 @@
             padding-bottom: 10px;
             text-align: left;
         }
-        h3 {
-            font-size: 1.4em;
-            margin-top: 15px;
-            text-align: center;
-        }
-        nav {
-            margin-bottom: 40px;
-        }
         nav ul {
             list-style-type: none;
             padding: 0;
             display: flex;
             justify-content: center;
+            margin-bottom: 40px;
         }
-        nav ul li {
-            margin: 0 15px;
-        }
+        nav ul li { margin: 0 15px; }
         nav ul li a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
             text-transform: uppercase;
         }
-        .content {
-            flex-grow: 1;
-            text-align: left;
-            padding: 0 40px;
-        }
-        footer {
-            text-align: center;
+        .content { text-align: center; }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
             margin-top: 40px;
         }
-        .project-link {
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
             color: #333;
             text-decoration: none;
-            cursor: pointer;
-            display: block;
         }
-        .project-link:hover {
-            text-decoration: underline;
+        .project-card:hover { 
+            transform: translateY(-5px);
+        }
+        .project-thumbnail {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .project-info {
+            padding: 20px;
+        }
+        .project-title {
+            font-size: 1.2em;
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .project-description {
+            font-size: 0.9em;
+            color: #666;
         }
         .instruction {
             font-style: italic;
             color: #666;
             margin-bottom: 20px;
+        }
+        footer {
             text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #f4f4f4;
         }
-        .project-thumbnail {
-            width: 500px;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin-bottom: 15px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .project-thumbnail:hover {
-            transform: scale(1.05);
-        }
-        .project-description {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        body {
-            opacity: 0;
-            transition: opacity 0.5s ease-in;
-        }
-        body.fade-in {
-            opacity: 1;
-        }
-        @media screen and (max-width: 600px) {
-            .container {
-                padding: 20px;
+        @media screen and (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
-            .content {
-                padding: 0 10px;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            h3 {
-                font-size: 1.3em;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                margin: 5px 0;
-            }
-            .project-thumbnail {
-                width: 100%;
-                height: auto;
-            }
+            .container { padding: 20px; }
         }
     </style>
     <script>
@@ -171,37 +130,45 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="index.html" onclick="return loadPage(this.href)">Home</a></li>
-                <li><a href="education.html" onclick="return loadPage(this.href)">Education</a></li>
-                <li><a href="skills.html" onclick="return loadPage(this.href)">Skills</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
             </ul>
         </nav>
         <div class="content">
             <h2>Projects/Experience</h2>
-            <p class="instruction">Click on Project for project details</p>
-            
-            <a href="https://drive.google.com/drive/folders/1GQpy1cAlpWehovMbIJSOxkg3Ul6ZgzeR?usp=drive_link" target="_blank" class="project-link">
-                <img src="Brown and Beige Modern Bookstore Logo.png" alt="Bookstore Sales Analysis" class="project-thumbnail">
-                <h3>Bookstore Sales Analysis</h3>
-            </a>
-            <p class="project-description">An advanced data analysis of sales of a bookstore.</p>
-            
-            <a href="https://drive.google.com/drive/folders/173UH9SQ7S9JfY_zPxBgtbRbJUuV-pnQq?usp=drive_link" target="_blank" class="project-link">
-                <img src="content writing.png" alt="Content Writing and Short Case Studies" class="project-thumbnail">
-                <h3>Content Writing and Short Case Studies</h3>
-            </a>
-            <p class="project-description">Some case studies and reports on them.</p>
-            
-            <a href="https://drive.google.com/file/d/1T94NV8Q_h19j9398R-tHF50PlTrJF3cr/view?usp=drive_link" target="_blank" class="project-link">
-                <img src="Mycobacterial Lipid Metabolism.png" alt="Internship (26th Jan 2024 - 4th May 2024)" class="project-thumbnail">
-                <h3>Internship (26th Jan 2024 - 4th May 2024)</h3>
-            </a>
-            <p class="project-description">Amity University Kolkata (AUK): Mycobacterial Lipid Transport and Metabolism under guidance of Dr. Prabuddha Gupta (Assistant Professor, AUK)</p>
-            
-            <img src="ABC transporter complex in.png" alt="Summer Internship (May 2023)" class="project-thumbnail">
-            <h3>Summer Internship (May 2023)</h3>
-            <p class="project-description">Amity University Kolkata (AUK): Characterization of ABC Transporter Proteins in Arabidopsis Thaliana under guidance of Dr. Ayan Raichaudhuri (Assistant Professor, Kolkata AUK)</p>
-            <p class="project-description"><i>Project details not available</i></p>
+            <p class="instruction">Click on a project to view details</p>
+            <div class="projects-grid">
+                <a href="https://drive.google.com/drive/folders/1GQpy1cAlpWehovMbIJSOxkg3Ul6ZgzeR?usp=drive_link" target="_blank" class="project-card">
+                    <img src="Brown and Beige Modern Bookstore Logo.png" alt="Bookstore Sales Analysis" class="project-thumbnail">
+                    <div class="project-info">
+                        <h3 class="project-title">Bookstore Sales Analysis</h3>
+                        <p class="project-description">An advanced data analysis of sales of a bookstore.</p>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/173UH9SQ7S9JfY_zPxBgtbRbJUuV-pnQq?usp=drive_link" target="_blank" class="project-card">
+                    <img src="content writing.png" alt="Content Writing and Short Case Studies" class="project-thumbnail">
+                    <div class="project-info">
+                        <h3 class="project-title">Content Writing and Short Case Studies</h3>
+                        <p class="project-description">Some case studies and reports on them.</p>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/file/d/1T94NV8Q_h19j9398R-tHF50PlTrJF3cr/view?usp=drive_link" target="_blank" class="project-card">
+                    <img src="Mycobacterial Lipid Metabolism.png" alt="Internship (26th Jan 2024 - 4th May 2024)" class="project-thumbnail">
+                    <div class="project-info">
+                        <h3 class="project-title">Internship (26th Jan 2024 - 4th May 2024)</h3>
+                        <p class="project-description">Amity University Kolkata (AUK): Mycobacterial Lipid Transport and Metabolism under guidance of Dr. Prabuddha Gupta (Assistant Professor, AUK)</p>
+                    </div>
+                </a>
+                <div class="project-card">
+                    <img src="ABC transporter complex in.png" alt="Summer Internship (May 2023)" class="project-thumbnail">
+                    <div class="project-info">
+                        <h3 class="project-title">Summer Internship (May 2023)</h3>
+                        <p class="project-description">Amity University Kolkata (AUK): Characterization of ABC Transporter Proteins in Arabidopsis Thaliana under guidance of Dr. Ayan Raichaudhuri (Assistant Professor, Kolkata AUK)</p>
+                        <p><i>Project details not available</i></p>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer>
             <p>&copy; 2024 Rishad Ahmed. All rights reserved.</p>
