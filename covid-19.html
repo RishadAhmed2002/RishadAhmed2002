@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISHAD AHMED - Impact of COVID-19</title>
+    <style>
+        @keyframes backgroundAnimation {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        @keyframes pulseOpacity {
+            0%, 100% { opacity: 0.05; }
+            50% { opacity: 0.5; }
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            height: 100%;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #f9f9f9;
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.3) 1px, transparent 1px);
+            background-size: 25px 25px;
+            animation: 
+                backgroundAnimation 10s linear infinite,
+                pulseOpacity 4s ease-in-out infinite;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            min-height: 100%;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .project-description {
+            margin-bottom: 30px;
+        }
+        .file-section {
+            margin-bottom: 30px;
+        }
+        .file-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .file-link:hover {
+            background-color: #e0e0e0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+        <h1>Impact of COVID-19</h1>
+        <div class="project-description">
+            <p>How the recent pandemic COVID-19 impacted the World</p>
+        </div>
+        <div class="file-section">
+            <h2>Project Files</h2>
+            <a href="Impact of COVID-19 Report.pdf" class="file-link" target="_blank">Impact of COVID-19 Report (PDF)</a>
+            <a href="COVID 19 DASHBOARD.pdf" class="file-link" target="_blank">COVID-19 Dashboard (PDF)</a>
+            <a href="COVID-19-global-data.xlsx" class="file-link" download>COVID-19 Global Data (Excel)</a>
+        </div>
+        <div class="file-section">
+            <h2>Analysis</h2>
+            <a href="https://colab.research.google.com/drive/1PU2vddRJLFrJ0tqH1LuR1jIZ4yJkevB6?usp=sharing" class="file-link" target="_blank">View Python Analysis (Google Colab)</a>
+        </div>
+        <footer>
+            <p>&copy; 2024 Rishad Ahmed. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
