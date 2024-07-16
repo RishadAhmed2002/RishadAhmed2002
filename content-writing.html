@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RISHAD AHMED - Content Writing and Short Case Studies</title>
     <style>
-        /* Styles from previous artifact */
+        /* Existing styles (same as the previous pages) */
         @keyframes backgroundAnimation {
             0% { background-position: 0 0; }
             100% { background-position: 50px 50px; }
@@ -85,33 +85,30 @@
             margin-top: 20px;
         }
         .file-thumbnail {
-            background-color: #fff;
+            background-color: #f0f0f0;
             border: 1px solid #ddd;
             border-radius: 5px;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
             position: relative;
             transition: box-shadow 0.3s ease;
-            overflow: hidden;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
         .file-thumbnail:hover {
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .file-preview {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 10px;
-            border: 1px solid #eee;
-        }
         .file-icon {
-            font-size: 60px;
+            font-size: 40px;
             margin-bottom: 10px;
         }
         .file-name {
             font-size: 14px;
             word-wrap: break-word;
-            margin-bottom: 5px;
         }
         .download-arrow {
             position: absolute;
@@ -142,20 +139,20 @@
         <div class="file-section">
             <h2>Project Files</h2>
             <div class="file-grid">
-                <div class="file-thumbnail">
-                    <img src="/api/pdf-preview/Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf" alt="PDF Preview" class="file-preview">
+                <div class="file-thumbnail" onclick="window.open('Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf', '_blank')">
+                    <div class="file-icon">📄</div>
                     <div class="file-name">Cytokeratin 18 in Breast Cancer.pdf</div>
-                    <div class="download-arrow" onclick="window.location.href='Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf'" title="Download PDF">⬇️</div>
+                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf'" title="Download PDF">⬇️</div>
                 </div>
-                <div class="file-thumbnail">
-                    <img src="/api/pdf-preview/Rishad Ahmed, Immunostaining.pdf" alt="PDF Preview" class="file-preview">
+                <div class="file-thumbnail" onclick="window.open('Rishad Ahmed, Immunostaining.pdf', '_blank')">
+                    <div class="file-icon">📄</div>
                     <div class="file-name">Immunostaining.pdf</div>
-                    <div class="download-arrow" onclick="window.location.href='Rishad Ahmed, Immunostaining.pdf'" title="Download PDF">⬇️</div>
+                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Rishad Ahmed, Immunostaining.pdf'" title="Download PDF">⬇️</div>
                 </div>
-                <div class="file-thumbnail">
-                    <img src="/api/pdf-preview/Rishad Ahmed, Nursing leader Mary Seacole.pdf" alt="PDF Preview" class="file-preview">
+                <div class="file-thumbnail" onclick="window.open('Rishad Ahmed, Nursing leader Mary Seacole.pdf', '_blank')">
+                    <div class="file-icon">📄</div>
                     <div class="file-name">Nursing Leader Mary Seacole.pdf</div>
-                    <div class="download-arrow" onclick="window.location.href='Rishad Ahmed, Nursing leader Mary Seacole.pdf'" title="Download PDF">⬇️</div>
+                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Rishad Ahmed, Nursing leader Mary Seacole.pdf'" title="Download PDF">⬇️</div>
                 </div>
             </div>
         </div>
