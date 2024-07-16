@@ -78,8 +78,6 @@
             padding: 20px 0;
             background-color: #f4f4f4;
         }
-
-        /* Updated styles for mixed file thumbnails */
         .file-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -87,33 +85,30 @@
             margin-top: 20px;
         }
         .file-thumbnail {
-            background-color: #fff;
+            background-color: #f0f0f0;
             border: 1px solid #ddd;
             border-radius: 5px;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
             position: relative;
             transition: box-shadow 0.3s ease;
-            overflow: hidden;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
         .file-thumbnail:hover {
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        .file-preview {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 10px;
-            border: 1px solid #eee;
-        }
         .file-icon {
-            font-size: 60px;
+            font-size: 40px;
             margin-bottom: 10px;
         }
         .file-name {
             font-size: 14px;
             word-wrap: break-word;
-            margin-bottom: 5px;
         }
         .download-arrow {
             position: absolute;
@@ -144,15 +139,15 @@
         <div class="file-section">
             <h2>Project Files</h2>
             <div class="file-grid">
-                <div class="file-thumbnail">
-                    <img src="/api/pdf-preview/Impact of COVID-19 Report.pdf" alt="PDF Preview" class="file-preview">
+                <div class="file-thumbnail" onclick="window.open('Impact of COVID-19 Report.pdf', '_blank')">
+                    <div class="file-icon">📄</div>
                     <div class="file-name">Impact of COVID-19 Report.pdf</div>
-                    <div class="download-arrow" onclick="window.location.href='Impact of COVID-19 Report.pdf'" title="Download PDF">⬇️</div>
+                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Impact of COVID-19 Report.pdf'" title="Download PDF">⬇️</div>
                 </div>
-                <div class="file-thumbnail">
-                    <img src="/api/pdf-preview/COVID 19 DASHBOARD.pdf" alt="PDF Preview" class="file-preview">
+                <div class="file-thumbnail" onclick="window.open('COVID 19 DASHBOARD.pdf', '_blank')">
+                    <div class="file-icon">📄</div>
                     <div class="file-name">COVID 19 DASHBOARD.pdf</div>
-                    <div class="download-arrow" onclick="window.location.href='COVID 19 DASHBOARD.pdf'" title="Download PDF">⬇️</div>
+                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='COVID 19 DASHBOARD.pdf'" title="Download PDF">⬇️</div>
                 </div>
                 <div class="file-thumbnail">
                     <div class="file-icon">📊</div>
@@ -163,7 +158,7 @@
         <div class="file-section">
             <h2>Analysis</h2>
             <div class="file-grid">
-                <div class="file-thumbnail">
+                <div class="file-thumbnail" onclick="window.open('https://colab.research.google.com/drive/1PU2vddRJLFrJ0tqH1LuR1jIZ4yJkevB6?usp=sharing', '_blank')">
                     <div class="file-icon">🐍</div>
                     <div class="file-name">Python Analysis (Google Colab)</div>
                 </div>
