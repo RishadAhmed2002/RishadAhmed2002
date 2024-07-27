@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISHAD AHMED - Google Stocks</title>
+    <style>
+        /* Existing styles (same as before) */
+        @keyframes backgroundAnimation {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        @keyframes pulseOpacity {
+            0%, 100% { opacity: 0.05; }
+            50% { opacity: 0.5; }
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            height: 100%;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #f9f9f9;
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.3) 1px, transparent 1px);
+            background-size: 25px 25px;
+            animation: 
+                backgroundAnimation 10s linear infinite,
+                pulseOpacity 4s ease-in-out infinite;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            min-height: 100%;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .project-description {
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #f4f4f4;
+        }
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .file-thumbnail {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            transition: box-shadow 0.3s ease;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .file-thumbnail:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .file-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .file-name {
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+        .download-arrow {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-size: 20px;
+            color: #555;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2px;
+            border-radius: 50%;
+        }
+        .download-arrow:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+        <h1>Google Stocks</h1>
+        <div class="project-description">
+            <p>Looking into the stocks data of Google</p>
+        </div>
+        <div class="file-section">
+            <h2>Project Files</h2>
+            <div class="file-grid">
+                <div class="file-thumbnail" onclick="window.open('Google Stock Report.pdf', '_blank')">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">Google Stock Report.pdf</div>
+                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Google Stock Report.pdf'" title="Download PDF">⬇️</div>
+                </div>
+                <div class="file-thumbnail" onclick="window.open('Google Stock Dashboard.pdf', '_blank')">
+                    <div class="file-icon">📊</div>
+                    <div class="file-name">Google Stock Dashboard.pdf</div>
+                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Google Stock Dashboard.pdf'" title="Download PDF">⬇️</div>
+                </div>
+                <div class="file-thumbnail">
+                    <div class="file-icon">📊</div>
+                    <div class="file-name">Google Stock Dataset.csv</div>
+                </div>
+            </div>
+        </div>
+        <div class="file-section">
+            <h2>Analysis</h2>
+            <div class="file-grid">
+                <div class="file-thumbnail" onclick="window.open('https://colab.research.google.com/drive/1Fzl8L8SPPR6yB67APbjHPxLb2K8xh5AJ?usp=drive_link', '_blank')">
+                    <div class="file-icon">🐍</div>
+                    <div class="file-name">Python Analysis (Google Colab)</div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Rishad Ahmed. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
