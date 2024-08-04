@@ -70,27 +70,42 @@
         }
         .project-description {
             margin-bottom: 30px;
+            text-align: center;
         }
         .file-section {
             margin-bottom: 30px;
         }
-        .file-link {
-            display: inline-block;
-            margin: 10px 0;
-            padding: 10px 15px;
-            background-color: #f0f0f0;
-            color: #333;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
-        .file-link:hover {
+        .file-card {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+        .file-card:hover {
             background-color: #e0e0e0;
         }
-        .download-arrow {
-            margin-left: 10px;
-            font-size: 0.8em;
-            vertical-align: middle;
+        .file-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .file-name {
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+        .download-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
         }
         footer {
             text-align: center;
@@ -112,17 +127,33 @@
         </div>
         <div class="file-section">
             <h2>Project Files</h2>
-            <a href="HR Analytics Report.pdf" class="file-link" target="_blank">HR Analytics Report (PDF)</a>
-            <a href="HR Analytics Report.pdf" class="file-link download-arrow" download title="Download PDF">↓</a>
-            <br>
-            <a href="HR Analytics Dashboard.pdf" class="file-link" target="_blank">HR Analytics Dashboard (PDF)</a>
-            <a href="HR Analytics Dashboard.pdf" class="file-link download-arrow" download title="Download PDF">↓</a>
-            <br>
-            <a href="Hr analytics/HR_Analytics_Dataset_Cleaned.csv" class="file-link" download>Download HR Analytics Dataset (CSV)</a>
+            <div class="file-grid">
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">HR Analytics Report.pdf</div>
+                    <a href="HR Analytics Report.pdf" class="download-icon" download title="Download PDF">⬇️</a>
+                </div>
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">HR Analytics Dashboard.pdf</div>
+                    <a href="HR Analytics Dashboard.pdf" class="download-icon" download title="Download PDF">⬇️</a>
+                </div>
+                <div class="file-card">
+                    <div class="file-icon">📊</div>
+                    <div class="file-name">HR_Analytics_Dataset_Cleaned.csv</div>
+                    <a href="Hr analytics/HR_Analytics_Dataset_Cleaned.csv" class="download-icon" download title="Download CSV">⬇️</a>
+                </div>
+            </div>
         </div>
         <div class="file-section">
             <h2>Analysis</h2>
-            <a href="https://colab.research.google.com/drive/1Oe4WGqfzGfp6VwqkVLJV7SmMfVN5dPym?usp=drive_link" class="file-link" target="_blank">View Python Analysis (Google Colab)</a>
+            <div class="file-grid">
+                <div class="file-card">
+                    <div class="file-icon">🐍</div>
+                    <div class="file-name">Python Analysis (Google Colab)</div>
+                    <a href="https://colab.research.google.com/drive/1Oe4WGqfzGfp6VwqkVLJV7SmMfVN5dPym?usp=drive_link" class="download-icon" target="_blank" title="View Analysis">🔗</a>
+                </div>
+            </div>
         </div>
         <footer>
             <p>&copy; 2024 Rishad Ahmed. All rights reserved.</p>
