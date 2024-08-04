@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RISHAD AHMED - Content Writing and Short Case Studies</title>
     <style>
-        /* Existing styles (same as the previous pages) */
+        /* Reuse the same styles as the main page for consistency */
         @keyframes backgroundAnimation {
             0% { background-position: 0 0; }
             100% { background-position: 50px 50px; }
@@ -69,60 +69,27 @@
             font-weight: bold;
             margin: 0 10px;
         }
-        .project-description {
+        .file-section {
             margin-bottom: 30px;
+        }
+        .file-link {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .file-link:hover {
+            background-color: #e0e0e0;
         }
         footer {
             text-align: center;
             margin-top: 40px;
             padding: 20px 0;
             background-color: #f4f4f4;
-        }
-        .file-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .file-thumbnail {
-            background-color: #f0f0f0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            text-align: center;
-            position: relative;
-            transition: box-shadow 0.3s ease;
-            height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-        .file-thumbnail:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .file-icon {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-        .file-name {
-            font-size: 14px;
-            word-wrap: break-word;
-        }
-        .download-arrow {
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            font-size: 20px;
-            color: #555;
-            cursor: pointer;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 2px;
-            border-radius: 50%;
-        }
-        .download-arrow:hover {
-            color: #000;
         }
     </style>
 </head>
@@ -134,27 +101,14 @@
         </nav>
         <h1>Content Writing and Short Case Studies</h1>
         <div class="project-description">
-            <p>Some case studies and reports on them</p>
+            <p>Some case studies and reports on various topics.</p>
         </div>
         <div class="file-section">
             <h2>Project Files</h2>
-            <div class="file-grid">
-                <div class="file-thumbnail" onclick="window.open('Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf', '_blank')">
-                    <div class="file-icon">📄</div>
-                    <div class="file-name">Cytokeratin 18 in Breast Cancer.pdf</div>
-                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf'" title="Download PDF">⬇️</div>
-                </div>
-                <div class="file-thumbnail" onclick="window.open('Rishad Ahmed, Immunostaining.pdf', '_blank')">
-                    <div class="file-icon">📄</div>
-                    <div class="file-name">Immunostaining.pdf</div>
-                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Rishad Ahmed, Immunostaining.pdf'" title="Download PDF">⬇️</div>
-                </div>
-                <div class="file-thumbnail" onclick="window.open('Rishad Ahmed, Nursing leader Mary Seacole.pdf', '_blank')">
-                    <div class="file-icon">📄</div>
-                    <div class="file-name">Nursing Leader Mary Seacole.pdf</div>
-                    <div class="download-arrow" onclick="event.stopPropagation(); window.location.href='Rishad Ahmed, Nursing leader Mary Seacole.pdf'" title="Download PDF">⬇️</div>
-                </div>
-            </div>
+            <a href="COntent writing/The Future of Mind AI, AGI, ASI and Singularity.pdf" class="file-link" target="_blank">The Future of Mind: AI, AGI, ASI and Singularity (PDF)</a>
+            <a href="Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf" class="file-link" target="_blank">Cytokeratin 18 in Breast Cancer (PDF)</a>
+            <a href="Rishad Ahmed, Immunostaining.pdf" class="file-link" target="_blank">Immunostaining (PDF)</a>
+            <a href="Rishad Ahmed, Nursing leader Mary Seacole.pdf" class="file-link" target="_blank">Nursing Leader Mary Seacole (PDF)</a>
         </div>
         <footer>
             <p>&copy; 2024 Rishad Ahmed. All rights reserved.</p>
