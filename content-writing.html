@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RISHAD AHMED - Content Writing and Short Case Studies</title>
     <style>
-        /* Reuse the same styles as the main page for consistency */
         @keyframes backgroundAnimation {
             0% { background-position: 0 0; }
             100% { background-position: 50px 50px; }
@@ -69,21 +68,44 @@
             font-weight: bold;
             margin: 0 10px;
         }
+        .project-description {
+            margin-bottom: 30px;
+            text-align: center;
+        }
         .file-section {
             margin-bottom: 30px;
         }
-        .file-link {
-            display: inline-block;
-            margin: 10px 0;
-            padding: 10px 15px;
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .file-card {
             background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+        .file-card:hover {
+            background-color: #e0e0e0;
+        }
+        .file-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .file-name {
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+        .download-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 24px;
             color: #333;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .file-link:hover {
-            background-color: #e0e0e0;
         }
         footer {
             text-align: center;
@@ -101,14 +123,37 @@
         </nav>
         <h1>Content Writing and Short Case Studies</h1>
         <div class="project-description">
-            <p>Some case studies and reports on various topics.</p>
+            <p>Some case studies and reports on them</p>
         </div>
         <div class="file-section">
             <h2>Project Files</h2>
-            <a href="COntent writing/The Future of Mind AI, AGI, ASI and Singularity.pdf" class="file-link" target="_blank">The Future of Mind: AI, AGI, ASI and Singularity (PDF)</a>
-            <a href="Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf" class="file-link" target="_blank">Cytokeratin 18 in Breast Cancer (PDF)</a>
-            <a href="Rishad Ahmed, Immunostaining.pdf" class="file-link" target="_blank">Immunostaining (PDF)</a>
-            <a href="Rishad Ahmed, Nursing leader Mary Seacole.pdf" class="file-link" target="_blank">Nursing Leader Mary Seacole (PDF)</a>
+            <div class="file-grid">
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">Cytokeratin 18 in Breast Cancer</div>
+                    <a href="Rishad Ahmed, Cytokeratin18 in Breast Cancer.pdf" class="download-icon" download title="Download PDF">⬇️</a>
+                </div>
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">Immunostaining</div>
+                    <a href="Rishad Ahmed, Immunostaining.pdf" class="download-icon" download title="Download PDF">⬇️</a>
+                </div>
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">Nursing Leader Mary Seacole</div>
+                    <a href="Rishad Ahmed, Nursing leader Mary Seacole.pdf" class="download-icon" download title="Download PDF">⬇️</a>
+                </div>
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">Echoes of Humanity</div>
+                    <a href="COntent writing/Echoes of Humanity.pdf" class="download-icon" download title="Download PDF">⬇️</a>
+                </div>
+                <div class="file-card">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name">Future of Mind</div>
+                    <a href="COntent writing/Future of Mind.pdf" class="download-icon" download title="Download PDF">⬇️</a>
+                </div>
+            </div>
         </div>
         <footer>
             <p>&copy; 2024 Rishad Ahmed. All rights reserved.</p>
